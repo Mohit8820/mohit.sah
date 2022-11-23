@@ -38,13 +38,6 @@
     });
   }
 
-  window.addEventListener("load", () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-    });
-  });
-
   /**
    * skills slider
    */
@@ -71,7 +64,7 @@
         spaceBetween: 20,
       },
       // when window width is >= 480px
-      480: {
+      600: {
         slidesPerView: 3,
         spaceBetween: 30,
       },
@@ -82,5 +75,50 @@
       },
     },
     loop: true,
+  });
+
+  /**
+   * Projects isotope and filter
+   */
+  window.addEventListener("load", () => {
+    let projectContainer = document.querySelector(".project-container");
+    if (projectContainer) {
+      let projectIsotope = new Isotope(projectContainer, {
+        itemSelector: ".project-item",
+      });
+
+      let projectFilters = document.querySelectorAll("#project-filters li");
+
+      projectFilters.forEach((e) =>
+        e.addEventListener("click", function (e) {
+          e.preventDefault();
+          projectFilters.forEach(function (el) {
+            el.classList.remove("filter-active");
+          });
+          this.classList.add("filter-active");
+
+          projectIsotope.arrange({
+            filter: this.getAttribute("data-filter"),
+          });
+          projectIsotope.addEventListener("arrangeComplete", function () {
+            AOS.refresh();
+          });
+        })
+      );
+    }
+  });
+
+  /**
+   * Initiate portfolio lightbox
+   */
+  const featLightbox = GLightbox({
+    selector: ".feat-lightbox",
+  });
+
+  window.addEventListener("load", () => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+    });
   });
 })();

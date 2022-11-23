@@ -15,6 +15,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css"
+      integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/plyr.min.css"
+      integrity="sha512-kzA10waqGTUBGThJFb6skfGDGUmTleyWjQy9qNaaUaXDwWmTV18jtu/P4PrwZkc89z+DLa0x0IoyuDcintgj/w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="animatedbg.css" />
     <title>Mohit Sah</title>
@@ -22,14 +36,168 @@
   <body>
     <nav>
       <ul>
-        <li class="home active"><a href="#home">Home</a></li>
-        <li class="about"><a href="#about">About</a></li>
-        <li class="journey"><a href="#journey">Journey</a></li>
-        <li class="projects"><a href="#projects">Projects</a></li>
-        <li class="achievements"><a href="#achievements">Achievements</a></li>
-        <li class="contact"><a href="#contact">Contact</a></li>
+        <li class="home active">
+          <a href="#home"
+            ><p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2.3rem"
+                height="2.6rem"
+                viewBox="0 0 23 26"
+                fill="none"
+              >
+                <path
+                  d="M1.43762 9.42436L11.5009 1.59735L21.5642 9.42436V21.724C21.5642 22.3171 21.3286 22.8859 20.9092 23.3052C20.4898 23.7246 19.921 23.9602 19.3279 23.9602H3.67391C3.08081 23.9602 2.512 23.7246 2.09262 23.3052C1.67323 22.8859 1.43762 22.3171 1.43762 21.724V9.42436Z"
+                  stroke="currentColor"
+                  stroke-width="2.23629"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8.14703 23.9599V12.7784H14.8559V23.9599"
+                  stroke="currentColor"
+                  stroke-width="2.23629"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </p>
+            <span>Home</span></a
+          >
+        </li>
+        <li class="about">
+          <a href="#about"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2.3rem"
+              height="2.6rem"
+              viewBox="0 0 23 26"
+              fill="none"
+            >
+              <path
+                d="M1.43762 9.42436L11.5009 1.59735L21.5642 9.42436V21.724C21.5642 22.3171 21.3286 22.8859 20.9092 23.3052C20.4898 23.7246 19.921 23.9602 19.3279 23.9602H3.67391C3.08081 23.9602 2.512 23.7246 2.09262 23.3052C1.67323 22.8859 1.43762 22.3171 1.43762 21.724V9.42436Z"
+                stroke="currentColor"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.14703 23.9599V12.7784H14.8559V23.9599"
+                stroke="currentColor"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>About</span></a
+          >
+        </li>
+        <li class="journey">
+          <a href="#journey">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2.3rem"
+              height="2.6rem"
+              viewBox="0 0 23 26"
+              fill="none"
+            >
+              <path
+                d="M1.43762 9.42436L11.5009 1.59735L21.5642 9.42436V21.724C21.5642 22.3171 21.3286 22.8859 20.9092 23.3052C20.4898 23.7246 19.921 23.9602 19.3279 23.9602H3.67391C3.08081 23.9602 2.512 23.7246 2.09262 23.3052C1.67323 22.8859 1.43762 22.3171 1.43762 21.724V9.42436Z"
+                stroke="currentColor"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.14703 23.9599V12.7784H14.8559V23.9599"
+                stroke="#484848"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Journey</span></a
+          >
+        </li>
+        <li class="projects">
+          <a href="#projects">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2.3rem"
+              height="2.6rem"
+              viewBox="0 0 23 26"
+              fill="none"
+            >
+              <path
+                d="M1.43762 9.42436L11.5009 1.59735L21.5642 9.42436V21.724C21.5642 22.3171 21.3286 22.8859 20.9092 23.3052C20.4898 23.7246 19.921 23.9602 19.3279 23.9602H3.67391C3.08081 23.9602 2.512 23.7246 2.09262 23.3052C1.67323 22.8859 1.43762 22.3171 1.43762 21.724V9.42436Z"
+                stroke="currentColor"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.14703 23.9599V12.7784H14.8559V23.9599"
+                stroke="#484848"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Projects</span></a
+          >
+        </li>
+        <li class="achievements">
+          <a href="#achievements">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2.3rem"
+              height="2.6rem"
+              viewBox="0 0 23 26"
+              fill="none"
+            >
+              <path
+                d="M1.43762 9.42436L11.5009 1.59735L21.5642 9.42436V21.724C21.5642 22.3171 21.3286 22.8859 20.9092 23.3052C20.4898 23.7246 19.921 23.9602 19.3279 23.9602H3.67391C3.08081 23.9602 2.512 23.7246 2.09262 23.3052C1.67323 22.8859 1.43762 22.3171 1.43762 21.724V9.42436Z"
+                stroke="currentColor"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.14703 23.9599V12.7784H14.8559V23.9599"
+                stroke="#484848"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Achievements</span></a
+          >
+        </li>
+        <li class="contact">
+          <a href="#contact">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2.3rem"
+              height="2.6rem"
+              viewBox="0 0 23 26"
+              fill="none"
+            >
+              <path
+                d="M1.43762 9.42436L11.5009 1.59735L21.5642 9.42436V21.724C21.5642 22.3171 21.3286 22.8859 20.9092 23.3052C20.4898 23.7246 19.921 23.9602 19.3279 23.9602H3.67391C3.08081 23.9602 2.512 23.7246 2.09262 23.3052C1.67323 22.8859 1.43762 22.3171 1.43762 21.724V9.42436Z"
+                stroke="currentColor"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.14703 23.9599V12.7784H14.8559V23.9599"
+                stroke="currentColor"
+                stroke-width="2.23629"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Contact</span></a
+          >
+        </li>
       </ul>
     </nav>
+    <div class="left-pane"></div>
     <main>
       <section id="home">
         <div data-aos="fade-zoom-in">
@@ -71,8 +239,38 @@
               <li><strong>Email : </strong>mohitsah8820@gmail.com</li>
             </ul>
             <a href="./assets/mohit_resume.pdf" target="_blank"
-              ><button class="Resume-btn">Resume</button></a
-            >
+              ><button class="Resume-btn">
+                Resume
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2.5rem"
+                  height="2.5rem"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M28.5 19.6667V25.5556C28.5 26.3366 28.1898 27.0855 27.6376 27.6377C27.0854 28.1899 26.3365 28.5001 25.5556 28.5001H4.94444C4.16353 28.5001 3.4146 28.1899 2.86241 27.6377C2.31022 27.0855 2 26.3366 2 25.5556V19.6667"
+                    stroke="currentColor"
+                    stroke-width="2.94444"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.88892 12.3055L15.25 19.6667L22.6111 12.3055"
+                    stroke="white"
+                    stroke-width="2.94444"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.25 19.6667V2"
+                    stroke="white"
+                    stroke-width="2.94444"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg></button
+            ></a>
           </div>
         </div>
         <div class="slider-container">
@@ -140,16 +338,187 @@
         </div>
       </section>
       <section id="journey">
-        <h1>Wanna Contact me just <u>click here</u></h1>
+        <h2 data-aos="fade-right">Journey</h2>
+        <div class="journey-flex">
+          <div class="education">
+            <div class="timeline" data-aos="fade-right">
+              <ul>
+                <li>
+                  <strong
+                    >B. Tech<br />
+                    Computer Science and Engineering</strong
+                  ><br /><em>Sarala Birla University</em><br />
+                  CGPA - 9.22/10.0
+                </li>
+                <li>
+                  <strong> Intermediate (CBSE)</strong><br /><em
+                    >Army Public School, Ranchi</em
+                  ><br />
+                  Percentage - 86.20%
+                </li>
+                <li>
+                  <strong> Matriculate (ICSE)</strong><br /><em
+                    >St. Francis School, Ranchi</em
+                  ><br />
+                  Percentage - 90.80%
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="internship">
+            <div class="timeline" data-aos="fade-left">
+              <ul>
+                <li>
+                  <strong>Web Development Intern</strong><br />
+                  <em>Tutedude, Hr</em><br />
+                  code the company website as <br />
+                  per the requirements.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
+
       <section id="projects">
-        <h1>This page created in 2021</h1>
+        <h2 data-aos="fade-right">Projects</h2>
+        <div class="" data-aos="fade-up">
+          <div class="">
+            <ul id="project-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-personal">Personal</li>
+              <li data-filter=".filter-internship">Internship</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-item filter-internship">
+            <div class="project-wrap">
+              <img src="assets/Calculator.png" class="poject-img" alt="" />
+              <h4>Calculator</h4>
+            </div>
+          </div>
+
+          <div class="project-item filter-personal">
+            <div class="project-wrap">
+              <img src="assets/Simon.webp" class="poject-img" alt="" />
+              <h4>Query Exchange Portal</h4>
+            </div>
+          </div>
+
+          <div class="project-item filter-internship">
+            <div class="project-wrap">
+              <img src="assets/todo.png" class="poject-img" alt="" />
+              <h4>To DO</h4>
+            </div>
+          </div>
+          <div class="project-item filter-personal">
+            <div class="project-wrap">
+              <img src="assets/query-ex.png" class="poject-img" alt="" />
+              <h4>Query Exchange Portal</h4>
+            </div>
+          </div>
+        </div>
       </section>
+
       <section id="achievements">
-        <h1>This page created in 2021</h1>
+        <h2 data-aos="fade-right">Achievements</h2>
+        <div class="feat-flex">
+          <a
+            href="./assets/feats/Java hackerrank certificate.png"
+            data-gallery="featGallery"
+            class="feat-lightbox"
+            title="Web 3"
+            ><img src="./assets/feats/Java hackerrank certificate.png" alt="" /
+            ></a
+          >
+          <a
+            href="./assets/feats/Problem Solving certificate.png"
+            data-gallery="featGallery"
+            class="feat-lightbox"
+            title="Web 3"
+            ><img src="./assets/feats/Problem Solving certificate.png" alt=""
+          /></a>
+          <a
+            href="./assets/feats/SQL certificate.png"
+            data-gallery="featGallery"
+            class="feat-lightbox"
+            title="Web 3"
+            ><img src="./assets/feats/SQL certificate.png" alt=""
+          /></a>
+          <a
+            href="./assets/Calculator.png"
+            data-gallery="featGallery"
+            class="feat-lightbox"
+            title="Web 3"
+            ><img src="./assets/Calculator.png" alt=""
+          /></a>
+        </div>
       </section>
+
       <section id="contact">
-        <h1>This page created in 2021</h1>
+        <h2 data-aos="fade-right">Contact</h2>
+        <div class="contact-flex">
+          <div class="contact-form">
+            <form
+              target="_blank"
+              action="https://formsubmit.co/lemo040520@gmail.com"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_next"
+                value="https://yourdomain.co/thanks.html"
+              />
+              <input type="hidden" name="_template" value="box" />
+              <div class="name-mail">
+                <input
+                  placeholder="Name"
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <input
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+
+              <input
+                placeholder="Subject"
+                type="text"
+                name="subject"
+                id="subject"
+                required
+              />
+              <textarea
+                placeholder="Message"
+                name="message"
+                rows="10"
+                required
+              ></textarea>
+              <button type="submit">
+                Send
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 30 30"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -167,6 +536,13 @@
     </ul>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+      integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js" charset="utf-8"></script>
   </body>
