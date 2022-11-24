@@ -14,6 +14,10 @@
 }
 /*bubbles z index
 bullets
+scroll arrow
+favicon
+icon on top left
+dark mode
 */
 * {
   margin: 0;
@@ -94,17 +98,16 @@ nav ul li svg {
 }
 nav {
   position: fixed;
-  top: 0;
+  bottom: 50%;
   left: 2rem;
-  height: 100vh;
+  transform: translateY(50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 999;
 }
 
 nav ul {
-  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -163,6 +166,7 @@ nav ul li.active a {
   transition: all 0.3s;
   border-radius: 50rem;
   opacity: 0;
+  z-index: 99999;
 }
 .back-to-top svg {
   fill: var(--link-text);
@@ -182,6 +186,7 @@ nav ul li.active a {
   margin-top: 5rem;
   z-index: 1;
   transition: all 0.3s;
+  z-index: 99999;
 }
 .link-icon svg {
   fill: var(--text-color);
@@ -196,7 +201,6 @@ nav ul li.active a {
   top: 50%;
   right: 4rem;
   flex-direction: column;
-  z-index: 1;
 }
 
 /*************home********************/
@@ -234,6 +238,7 @@ nav ul li.active a {
   left: 0;
   top: 0;
   height: 100vh;
+  z-index: 2;
 }
 
 #home h1 {
@@ -582,11 +587,22 @@ nav ul li.active a {
 #project-filters li:last-child {
   margin-right: 0;
 }
+.grid {
+  width: 100%;
+}
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .project-item {
+  position: relative;
+  float: left;
   width: 33.33333333%;
   height: auto;
   padding: 1.5rem;
+  flex: 0 0 auto;
 }
 .project-item:hover::before {
   top: 4rem;
@@ -723,7 +739,7 @@ nav ul li.active a {
   margin-left: 20rem;
 }
 .feat-flex img {
-  height: 40vh;
+  height: 35vh;
   transform: rotateY(35deg);
   transition: all 0.3s ease-in-out;
 }
@@ -735,7 +751,7 @@ nav ul li.active a {
 
 .feat-flex::-webkit-scrollbar {
   display: block;
-  height: 1.3rem;
+  height: 0.3rem;
 }
 
 .feat-flex::-webkit-scrollbar-track {
@@ -750,13 +766,13 @@ nav ul li.active a {
 
 .feat-flex::-webkit-scrollbar-track-piece:end {
   background: var(--nav-bg);
-  margin-right: 30vw;
+  margin-right: 30%;
   border-radius: 50rem;
 }
 
 .feat-flex::-webkit-scrollbar-track-piece:start {
   background: var(--nav-bg);
-  margin-left: 30vw;
+  margin-left: 30%;
   border-radius: 50rem;
 }
 
@@ -843,4 +859,204 @@ form button {
   font-size: 2.4rem;
   margin-top: 2rem;
   align-self: center;
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 1300px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 1160px) {
+  html {
+    font-size: 35%;
+  }
+}
+@media (max-width: 1000px) {
+  html {
+    font-size: 30%;
+  }
+}
+@media (max-width: 850px) {
+  html {
+    font-size: 25%;
+  }
+}
+@media (max-width: 740px) {
+  html {
+    font-size: 40%;
+  }
+  section:not(#home) {
+    width: 70%;
+  }
+  #home {
+    background-position: left 150% top 0rem;
+  }
+  .introduction {
+    flex-direction: column;
+  }
+  .Resume-btn {
+    margin: 4rem auto 0;
+  }
+  .journey-flex {
+    flex-direction: column;
+    gap: 10rem;
+  }
+  .internship {
+    align-self: flex-end;
+  }
+  .project-item {
+    width: 50%;
+  }
+  .contact-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+@media (max-width: 610px) {
+  .links-on-side {
+    flex-direction: row;
+    bottom: auto;
+    top: 0;
+    margin-top: 2rem;
+  }
+  .left-pane {
+    display: none;
+  }
+  nav {
+    bottom: 0;
+    padding: 4rem 0 2rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100vw;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 40%,
+      #ffffff 80%
+    );
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  nav ul li a {
+    flex-direction: column;
+    width: auto;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+  }
+  nav ul li a:hover span {
+    display: none;
+  }
+  nav ul li a:hover {
+    color: var(--text-color);
+    background: var(--nav-bg);
+    width: auto;
+  }
+  nav ul li.active a span {
+    display: block;
+  }
+  nav ul li.active a {
+    color: var(--link-text);
+    background: var(--accent-color);
+    width: 100%;
+  }
+  #home {
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.4) 20%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.8) 100%
+      ),
+      url(./assets/mohit-bg.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    margin-left: 0;
+    /* z-index: -1; */
+    padding-left: 6.5rem;
+  }
+
+  .feat-flex a:first-of-type img {
+    margin-left: 32rem;
+  }
+  .feat-flex a {
+    margin-left: -30rem;
+  }
+
+  .feat-flex img:hover {
+    margin-right: 32rem;
+  }
+
+  #contact {
+    padding-bottom: 15rem;
+  }
+  .name-mail {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 470px) {
+  html {
+    font-size: 35%;
+  }
+  .back-to-top {
+    bottom: 10rem;
+  }
+  .project-item {
+    width: 100% !important;
+    border: var(--accent-color) 0.1rem solid;
+    border-radius: 0.4rem;
+    margin-bottom: 2rem;
+  }
+  .intro {
+    width: auto;
+  }
+
+  .feat-flex a:first-of-type img {
+    margin-left: 42rem;
+  }
+  .feat-flex a {
+    margin-left: -40rem;
+  }
+
+  .feat-flex img:hover {
+    margin-right: 42rem;
+  }
+  textarea {
+    height: 10rem;
+  }
+}
+@media (max-width: 420px) {
+  .swiper {
+    width: 32rem;
+  }
+}
+@media (max-width: 370px) {
+  html {
+    font-size: 30%;
+  }
+}
+@media (max-aspect-ratio: 3/4) {
+  .introduction {
+    flex-direction: column;
+  }
+  .project-item {
+    width: 50%;
+  }
+  .contact-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-form {
+    width: 100%;
+  }
 }
