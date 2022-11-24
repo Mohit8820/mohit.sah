@@ -39,6 +39,37 @@
   }
 
   /**
+   * links
+   */
+  let links = document.querySelector(".links");
+  if (links) {
+    const togglelinkstoside = () => {
+      if (window.scrollY > 400) {
+        links.classList.add("links-on-side");
+      } else {
+        links.classList.remove("links-on-side");
+      }
+    };
+    window.addEventListener("load", togglelinkstoside);
+    document.addEventListener("scroll", togglelinkstoside);
+  }
+  /**
+   * back-to-top
+   */
+  let backtotop = document.querySelector(".back-to-top");
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add("back-to-top-active");
+      } else {
+        backtotop.classList.remove("back-to-top-active");
+      }
+    };
+    window.addEventListener("load", toggleBacktotop);
+    document.addEventListener("scroll", toggleBacktotop);
+  }
+
+  /**
    * skills slider
    */
   new Swiper(".skills-slider", {
@@ -71,7 +102,7 @@
       // when window width is >= 640px
       640: {
         slidesPerView: 4,
-        spaceBetween: 40,
+        spaceBetween: 50,
       },
     },
     loop: true,
