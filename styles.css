@@ -5,38 +5,66 @@
   --accent-color-faded: #8b3ffc10;
   --heading-color: #252a7c;
   --text-color: #484848;
-  /*background-color: aliceblue; bg green*/
-  --blue-border: #5d81cb60; /*blue border*/
   --main-font: "Raleway", sans-serif;
-  --border-radius: 50rem;
-  --shadow: 0.2rem 0.3rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
   --bg: #fff;
+  --mohit-bg-gradient1: #ffffff26;
+  --mohit-bg-gradient2: #ffffff30;
+  --mohit-bg-gradient3: #ffffff33;
+  --mohit-bg-gradient4: #ffffffcc;
+
+  --feat-bg: #ffffff80;
+
+  --project-bg1: #8a3ffc0d;
+  --project-bg2: #ffffff0d;
+  --nav-bg2: #ffffff00;
 }
-/*bubbles z index
-bullets
-scroll arrow
-favicon
-icon on top left
-dark mode
-*/
+/* :root {
+  --nav-bg: #313131;
+  --link-text: #fff;
+  --accent-color: #8a3ffc;
+  --accent-color-faded: #8b3ffc10;
+  --heading-color: #e0e7ff;
+  --text-color: #e1e1e1;
+  --main-font: "Raleway", sans-serif;
+  --bg: #1d1d1d;
+  --mohit-bg-gradient: linear-gradient(
+    270deg,
+    #1d1d1d26 0%,
+    #1d1d1d30 0.01%,
+    #1d1d1d31 0.02%,
+    #1d1d1d33 46.88%,
+    #1d1d1d 98.88%,
+    #1d1d1d 100%
+  );
+  --feat-bg: linear-gradient(90deg, #1d1d1d 20%, #1d1d1d80 50%, #1d1d1d 80%);
+  --project-bg: radial-gradient(
+    50.03% 141.34% at 50.03% 50.05%,
+    #8a3ffc0d 0%,
+    #1d1d1d0d 100%
+  );
+} */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  transition: color 0.2s, background 1s;
 }
 html {
   font-size: 50%;
   font-family: var(--main-font);
   color: var(--text-color);
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 ::-webkit-scrollbar {
   display: none;
 }
 body {
-  background-color: #fdfdfd;
+  background-color: var(--bg);
 }
 button {
   border: none;
@@ -167,6 +195,7 @@ nav ul li.active a {
   border-radius: 50rem;
   opacity: 0;
   z-index: 99999;
+  border: 0.1rem solid var(--bg);
 }
 .back-to-top svg {
   fill: var(--link-text);
@@ -180,7 +209,7 @@ nav ul li.active a {
 
 .links {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   justify-content: flex-start;
   margin-top: 5rem;
@@ -198,9 +227,34 @@ nav ul li.active a {
 
 .links-on-side {
   position: fixed;
-  top: 50%;
-  right: 4rem;
+  top: 47%;
+  right: 7rem;
   flex-direction: column;
+}
+.links-on-side .link-icon {
+  width: 5rem;
+  height: 5rem;
+  background: var(--nav-bg);
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/**********display-mode****************/
+.display-mode {
+  position: fixed;
+  right: 0;
+  top: 2.4rem;
+  padding: 0.8rem 1rem;
+  background-color: var(--text-color);
+  border-radius: 50rem 0 0 50rem;
+  z-index: 99999;
+}
+.display-mode svg {
+  fill: var(--bg);
+}
+.light {
+  display: none;
 }
 
 /*************home********************/
@@ -208,12 +262,12 @@ nav ul li.active a {
 #home {
   background-image: linear-gradient(
       270deg,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(255, 255, 255, 0.19) 0.01%,
-      rgba(255, 255, 255, 0.192887) 0.02%,
-      rgba(255, 255, 255, 0.2) 46.88%,
-      #ffffff 98.88%,
-      #ffffff 100%
+      var(--mohit-bg-gradient1) 0%,
+      var(--mohit-bg-gradient2) 0.01%,
+      var(--mohit-bg-gradient2) 0.02%,
+      var(--mohit-bg-gradient3) 46.88%,
+      var(--bg) 98.88%,
+      var(--bg) 100%
     ),
     url(./assets/mohit-bg.webp);
   /* filter: saturate(1.4); */
@@ -329,6 +383,17 @@ nav ul li.active a {
 .intro ul li {
   list-style: none;
   margin-top: 1.5rem;
+  margin-left: 3rem;
+  position: relative;
+}
+.intro ul li::after {
+  content: ">";
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  transform: translateY(-60%);
+  color: var(--accent-color);
+  font-family: cursive;
 }
 .intro em {
   font-size: 2rem;
@@ -446,7 +511,7 @@ nav ul li.active a {
   color: var(--link-text);
   padding: 0.5rem 1.5rem 0;
   font-weight: 500;
-  border-radius: 50rem;
+  /* border-radius: 50rem; */
 }
 .education li:nth-of-type(1)::before {
   content: "2019 - Present";
@@ -468,19 +533,19 @@ nav ul li.active a {
   z-index: 1;
 }
 .education li:nth-of-type(1) em:after {
-  background: url("./assets/organizations/sbu.png");
+  background: url("./assets/organizations/sbu.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .education li:nth-of-type(2) em:after {
-  background: url("./assets/organizations/aps.png");
+  background: url("./assets/organizations/aps.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .education li:nth-of-type(3) em:after {
-  background: url("./assets/organizations/sfs.png");
+  background: url("./assets/organizations/sfs.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -547,7 +612,7 @@ nav ul li.active a {
   z-index: 1;
 }
 .internship li:nth-of-type(1) em:after {
-  background: url("./assets/organizations/Tutedudelogo.png");
+  background: url("./assets/organizations/Tutedudelogo.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -556,8 +621,8 @@ nav ul li.active a {
 #projects {
   background: radial-gradient(
     50.03% 141.34% at 50.03% 50.05%,
-    rgba(138, 63, 252, 0.05) 0%,
-    rgba(255, 255, 255, 0.05) 100%
+    var(--project-bg1) 0%,
+    var(--project-bg2) 100%
   );
 }
 
@@ -566,7 +631,7 @@ nav ul li.active a {
   margin: -2vh auto 3rem auto;
   list-style: none;
   text-align: center;
-  background: #fff;
+  background: var(--bg);
   padding: 0.2rem;
 }
 
@@ -715,9 +780,9 @@ nav ul li.active a {
 .feat-bg {
   background-image: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 1) 20%,
-      rgba(255, 255, 255, 0.5) 70%,
-      #ffffff 80%
+      var(--bg) 20%,
+      var(--feat-bg) 50%,
+      var(--bg) 80%
     ),
     url(./assets/pexels-kevin-ku-577585.jpg);
   background-size: cover;
@@ -732,17 +797,17 @@ nav ul li.active a {
 }
 .feat-flex a {
   perspective: 120rem;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: -15rem;
 }
 .feat-flex a:first-of-type img {
-  margin-left: 20rem;
+  margin-left: 15rem;
 }
 .feat-flex img {
-  height: 70%;
+  height: 30rem;
   transform: rotateY(35deg);
   transition: all 0.3s ease-in-out;
 }
@@ -829,6 +894,7 @@ textarea {
   padding: 2rem;
   font-size: 2.2rem;
   font-family: var(--main-font);
+  color: var(--text-color);
 }
 input:focus,
 textarea:focus {
@@ -941,9 +1007,9 @@ form button {
     width: 100vw;
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.8) 40%,
-      #ffffff 80%
+      var(--nav-bg2) 0%,
+      var(--mohit-bg-gradient4) 40%,
+      var(--bg) 80%
     );
   }
   nav ul {
@@ -975,9 +1041,9 @@ form button {
   #home {
     background-image: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.4) 20%,
-        rgba(255, 255, 255, 0.8) 50%,
-        rgba(255, 255, 255, 0.8) 100%
+        var(--mohit-bg-gradient3) 20%,
+        var(--mohit-bg-gradient4) 50%,
+        var(--mohit-bg-gradient4) 100%
       ),
       url(./assets/mohit-bg.webp);
     background-size: cover;
@@ -989,14 +1055,14 @@ form button {
   }
 
   .feat-flex a:first-of-type img {
-    margin-left: 32rem;
+    margin-left: 18rem;
   }
   .feat-flex a {
-    margin-left: -30rem;
+    margin-left: -20rem;
   }
 
   .feat-flex img:hover {
-    margin-right: 32rem;
+    margin-right: 20rem;
   }
 
   #contact {
@@ -1040,14 +1106,14 @@ form button {
     right: 2rem;
   }
   .feat-flex a:first-of-type img {
-    margin-left: 42rem;
+    margin-left: 23rem;
   }
   .feat-flex a {
-    margin-left: -40rem;
+    margin-left: -25rem;
   }
 
   .feat-flex img:hover {
-    margin-right: 42rem;
+    margin-right: 25rem;
   }
   textarea {
     height: 15vh;
@@ -1083,5 +1149,47 @@ form button {
   }
   .contact-form {
     width: 100%;
+  }
+}
+
+/****************bubble************/
+@keyframes wave {
+  from,
+  to {
+    transform: translate(-50%, 0%);
+  }
+
+  50% {
+    transform: translate(-50%, -20%);
+  }
+}
+
+#bubble-wrapper {
+  height: 100%;
+  width: 100%;
+
+  bottom: 0px;
+
+  overflow: hidden;
+}
+
+.bubble {
+  height: max(300px, 30vw);
+  width: max(300px, 30vw);
+
+  background-color: var(--accent-color);
+  border-radius: 100%;
+
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  z-index: 0;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion) {
+  .bubble {
+    animation: none;
+    display: none;
   }
 }
