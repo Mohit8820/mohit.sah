@@ -1,6 +1,11 @@
 (function () {
   "use strict";
 
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+  });
+
   const sections = document.querySelectorAll("section");
   const navLi = document.querySelectorAll("nav ul li");
   window.onscroll = () => {
@@ -85,28 +90,10 @@
       type: "bullets",
       clickable: true,
     },
-    slidesPerView: 1,
-    spaceBetween: 10,
-    // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
       120: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      420: {
-        slidesPerView: 2,
-        spaceBetween: 80,
-      },
-      580: {
-        slidesPerView: 2,
         spaceBetween: 20,
-      },
-
-      // when window width is >= 740px
-      740: {
-        slidesPerView: 4,
-        spaceBetween: 50,
       },
     },
     loop: true,
@@ -148,12 +135,5 @@
    */
   const featLightbox = GLightbox({
     selector: ".feat-lightbox",
-  });
-
-  window.addEventListener("load", () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-    });
   });
 })();

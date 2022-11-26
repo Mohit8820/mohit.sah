@@ -215,7 +215,8 @@ nav ul li.active a {
       #ffffff 98.88%,
       #ffffff 100%
     ),
-    url(./assets/mohit-bg.jpg);
+    url(./assets/mohit-bg.webp);
+  filter: saturate(1.4);
   background-size: 92%;
   background-position: left 150% top -15rem;
   background-attachment: fixed;
@@ -356,7 +357,9 @@ nav ul li.active a {
   padding: 2rem 0 0;
   margin-top: 8vh;
 }
-
+.swiper-slide {
+  width: 32rem;
+}
 .skill-set {
   display: flex;
   gap: 3rem;
@@ -951,6 +954,7 @@ form button {
     width: auto;
     justify-content: center;
     transition: all 0.3s ease-in;
+    font-size: 1.5rem;
   }
   nav ul li a:hover span {
     display: none;
@@ -975,7 +979,7 @@ form button {
         rgba(255, 255, 255, 0.8) 50%,
         rgba(255, 255, 255, 0.8) 100%
       ),
-      url(./assets/mohit-bg.jpg);
+      url(./assets/mohit-bg.webp);
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -1005,18 +1009,18 @@ form button {
 }
 
 @media (max-width: 470px) {
-  html {
-    font-size: 35%;
+  section:not(#home) {
+    width: 85%;
   }
   .back-to-top {
     bottom: 10rem;
   }
-  .project-item {
+  /* .project-item {
     width: 100% !important;
     border: var(--accent-color) 0.1rem solid;
     border-radius: 0.4rem;
     margin-bottom: 2rem;
-  }
+  } */
   .intro {
     width: auto;
   }
@@ -1035,11 +1039,7 @@ form button {
     height: 10rem;
   }
 }
-@media (max-width: 420px) {
-  .swiper {
-    width: 32rem;
-  }
-}
+
 @media (max-width: 370px) {
   html {
     font-size: 30%;
