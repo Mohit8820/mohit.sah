@@ -216,7 +216,7 @@ nav ul li.active a {
       #ffffff 100%
     ),
     url(./assets/mohit-bg.webp);
-  filter: saturate(1.4);
+  /* filter: saturate(1.4); */
   background-size: 92%;
   background-position: left 150% top -15rem;
   background-attachment: fixed;
@@ -742,7 +742,7 @@ nav ul li.active a {
   margin-left: 20rem;
 }
 .feat-flex img {
-  height: 35vh;
+  height: 70%;
   transform: rotateY(35deg);
   transition: all 0.3s ease-in-out;
 }
@@ -1009,6 +1009,9 @@ form button {
 }
 
 @media (max-width: 470px) {
+  html {
+    font-size: 37%;
+  }
   section:not(#home) {
     width: 85%;
   }
@@ -1022,9 +1025,20 @@ form button {
     margin-bottom: 2rem;
   } */
   .intro {
-    width: auto;
+    width: 50rem;
+  }
+  .project-item {
+    padding: 1rem 0.5rem;
   }
 
+  .project-item:hover::before {
+    top: 2rem;
+    left: 2rem;
+  }
+  .project-item:hover::after {
+    bottom: 2rem;
+    right: 2rem;
+  }
   .feat-flex a:first-of-type img {
     margin-left: 42rem;
   }
@@ -1036,13 +1050,24 @@ form button {
     margin-right: 42rem;
   }
   textarea {
-    height: 10rem;
+    height: 15vh;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 330px) {
+  html {
+    font-size: 35%;
+  }
+  .feat-flex img {
+    height: 65%;
+  }
+}
+@media (max-width: 330px) {
   html {
     font-size: 30%;
+  }
+  .intro {
+    width: auto;
   }
 }
 @media (max-aspect-ratio: 3/4) {

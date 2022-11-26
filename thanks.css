@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 20vh 10rem 4rem !important;
+}
+.thanks button {
+  background: var(--accent-color);
+  font-style: inherit;
+  font-size: 2.4rem;
+  padding: 2rem 6rem;
+  border-radius: 0.2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*----Variables ----*/
+/*----Abstract Classes ----*/
+.envelope {
+  position: relative;
+  transform: scale(2);
+  margin-bottom: 5rem;
+}
+@media (max-width: 520px) {
+  .envelope {
+    transform: scale(1.3);
+  }
+}
+@media (max-width: 320px) {
+  .envelope {
+    transform: scale(1);
+  }
+}
+.envelope .paper,
+.envelope .paper .message,
+.envelope .shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*----Components ----*/
+.envelope {
+  background: #7979aa;
+  width: 150px;
+  height: 90px;
+  font-size: 2rem;
+}
+.envelope .cover {
+  position: relative;
+}
+.envelope .cover .top,
+.envelope .cover .side,
+.envelope .cover .bottom {
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+}
+.envelope .cover .top {
+  cursor: pointer;
+  filter: drop-shadow(0px 2px 3px rgba(50, 0, 50, 0.1));
+}
+.envelope .cover .top .top-cover {
+  height: calc(90px - 30px);
+  background: #7979aa;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.envelope .cover .side {
+  filter: drop-shadow(0px -1px 3px rgba(50, 0, 50, 0.2));
+  height: 90px;
+}
+.envelope .cover .side .left,
+.envelope .cover .side .right {
+  position: absolute;
+  background: #5d5d93;
+  width: calc(150px / 2);
+  height: 90px;
+}
+.envelope .cover .side .left {
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+.envelope .cover .side .right {
+  right: 0;
+  -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+.envelope .cover .bottom {
+  top: calc(90px / 2);
+  height: calc(90px / 2);
+  background: #555587;
+  -webkit-clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+  clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+}
+.envelope .paper {
+  position: relative;
+  width: 120px;
+  height: 70px;
+  background: #dadae7;
+  color: #50507f;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgba(50, 0, 50, 0.3);
+  z-index: 1;
+}
+.envelope .paper .message {
+  font-family: "Satisfy", cursive;
+  text-align: center;
+}
+.envelope .paper .close {
+  cursor: pointer;
+  position: absolute;
+  font-size: 12px;
+  top: 10px;
+  right: 10px;
+}
+.envelope .shadow {
+  height: 30px;
+  width: 160px;
+  top: 150%;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    rgba(0, 0, 50, 0.3),
+    rgba(250, 250, 250, 0)
+  );
+  filter: blur(5px);
+}
+
+.example-box {
+  background-image: linear-gradient(to bottom right, #eb01a5, #d13531);
+  position: relative;
+  background-size: cover;
+  color: white;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.example-box * {
+  z-index: 2;
+}
+
+.thanks svg {
+  fill: #fff !important;
+}
+.thanks {
+  color: #fff;
+  background: #2980b9
+    url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
+    repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-moz-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-ms-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-o-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
