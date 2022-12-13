@@ -209,7 +209,7 @@ nav ul li.active a {
 
 .links {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
   justify-content: flex-start;
   margin-top: 5rem;
@@ -230,6 +230,7 @@ nav ul li.active a {
   top: 47%;
   right: 7rem;
   flex-direction: column;
+  gap: 2rem;
 }
 .links-on-side .link-icon {
   width: 5rem;
@@ -667,7 +668,7 @@ nav ul li.active a {
 .project-item {
   position: relative;
   float: left;
-  width: 33.33333333%;
+  width: 25%;
   height: auto;
   padding: 1.5rem;
   flex: 0 0 auto;
@@ -769,7 +770,7 @@ nav ul li.active a {
   padding: 1rem;
 }
 .glightbox-clean .gslide-title {
-  font-size: 2.2rem;
+  font-size: 2.2rem !important;
   font-weight: 500;
   font-family: var(--main-font);
   color: var(--text-color);
@@ -784,7 +785,7 @@ nav ul li.active a {
       var(--feat-bg) 50%,
       var(--bg) 80%
     ),
-    url(./assets/pexels-kevin-ku-577585.jpg);
+    url(./assets/pexels-kevin-ku-577585.webp);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

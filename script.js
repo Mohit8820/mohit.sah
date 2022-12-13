@@ -165,8 +165,9 @@
     r.style.setProperty("--bg", "#fff");
     r.style.setProperty("--mohit-bg-gradient1", "#ffffff26");
     r.style.setProperty("--mohit-bg-gradient2", "#ffffff30");
-    r.style.setProperty("--nav-bg2", "#ffffff00");
+    r.style.setProperty("--mohit-bg-gradient3", "#ffffff33");
     r.style.setProperty("--mohit-bg-gradient4", "#ffffffcc");
+    r.style.setProperty("--nav-bg2", "#ffffff00");
     r.style.setProperty("--feat-bg", "#ffffff80");
     r.style.setProperty("--project-bg1", "#8a3ffc0d");
     r.style.setProperty("--project-bg2", "#ffffff0d");
