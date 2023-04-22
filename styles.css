@@ -691,6 +691,7 @@ nav ul li.active a {
   opacity: 0;
   transition: all 0.5s ease 0s;
   z-index: 9994;
+  border-radius: 0.4rem;
 }
 .project-item:hover::after {
   bottom: 4rem;
@@ -710,6 +711,7 @@ nav ul li.active a {
   opacity: 0;
   transition: all 0.5s ease 0s;
   z-index: 9994;
+  border-radius: 0.4rem;
 }
 .project-item img {
   width: 100%;
@@ -721,6 +723,7 @@ nav ul li.active a {
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
+  border-radius: 0.4rem;
 }
 
 .project-wrap h4 {
