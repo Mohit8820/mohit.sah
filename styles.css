@@ -65,6 +65,7 @@ html {
 }
 body {
   background-color: var(--bg);
+  cursor: url("./assets/cur.svg"), auto;
 }
 button {
   border: none;
@@ -411,6 +412,8 @@ nav ul li.active a {
   gap: 1rem;
   font-size: 2.2rem;
   margin-top: 2rem;
+  font-family: var(--main-font);
+  color: var(--link-text);
 }
 
 .slider-container {
@@ -600,7 +603,7 @@ nav ul li.active a {
   font-weight: 500;
 }
 .internship li:nth-of-type(1)::before {
-  content: "2021 - 2022";
+  content: "Dec '21 - Feb '23";
 }
 
 .internship li em::after {
