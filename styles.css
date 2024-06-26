@@ -490,7 +490,7 @@ nav ul li.active a {
 }
 
 .education ul li,
-.internship ul li {
+.experience ul li {
   position: relative;
 }
 .education ul li::after {
@@ -555,13 +555,13 @@ nav ul li.active a {
   background-repeat: no-repeat;
 }
 
-.internship {
+.experience {
   margin-right: 20rem;
   margin-top: 8rem;
   position: relative;
 }
-.internship::before {
-  content: "Internship";
+.experience::before {
+  content: "Experience";
   font-weight: 600;
   font-size: 3rem;
   color: var(--heading-color);
@@ -570,7 +570,7 @@ nav ul li.active a {
   top: -8rem;
   right: 0;
 }
-.internship ul {
+.experience ul {
   font-size: 2.2rem;
   display: flex;
   flex-direction: column;
@@ -579,7 +579,7 @@ nav ul li.active a {
   border-right: 0.3rem solid var(--accent-color);
   text-align: right;
 }
-.internship ul li::after {
+.experience ul li::after {
   content: "";
   width: 2.2rem;
   height: 2.2rem;
@@ -591,7 +591,7 @@ nav ul li.active a {
   transform: translateX(53%);
   border-radius: 50rem;
 }
-.internship ul li::before {
+.experience ul li::before {
   height: 3.4rem;
   background: var(--accent-color);
   position: absolute;
@@ -602,11 +602,14 @@ nav ul li.active a {
   padding: 0.5rem 1.5rem 0;
   font-weight: 500;
 }
-.internship li:nth-of-type(1)::before {
+.experience li:nth-of-type(1)::before {
   content: "Dec '21 - Feb '23";
 }
+.experience li:nth-of-type(2)::before {
+  content: "Oct '23 - Present";
+}
 
-.internship li em::after {
+.experience li em::after {
   content: "";
   position: absolute;
   width: 7rem;
@@ -615,8 +618,14 @@ nav ul li.active a {
   right: -14rem;
   z-index: 1;
 }
-.internship li:nth-of-type(1) em:after {
+.experience li:nth-of-type(1) em:after {
   background: url("./assets/organizations/Tutedudelogo.webp");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.experience li:nth-of-type(2) em:after {
+  background: url("./assets/organizations/tcs.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -982,7 +991,7 @@ form button {
     flex-direction: column;
     gap: 10rem;
   }
-  .internship {
+  .experience {
     align-self: flex-end;
   }
   .project-item {
